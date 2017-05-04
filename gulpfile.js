@@ -29,4 +29,9 @@ gulp.task('js', function () {
         .pipe(gulp.dest('public'));
 });
 
+gulp.task('watch', ['html', 'css', 'js'], function (){
+    gulp.watch('index.html', ['html']);
+    gulp.watch('scss/*.scss', ['css']);
+    gulp.watch('js/*.js', ['js']);
+});
 // watch
